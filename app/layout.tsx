@@ -15,6 +15,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Agora AI Therapist",
   description: "Video avatar AI therapist powered by TEN Framework",
+  openGraph: {
+    title: "Agora AI Therapist",
+    description: "Video avatar AI therapist powered by TEN Framework",
+    siteName: "Agora AI Therapist",
+    type: "website",
+    url: "https://ten-demo.agora.io/ai-therapist",
+  },
 }
 
 export default function RootLayout({
