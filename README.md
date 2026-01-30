@@ -47,16 +47,32 @@ Open http://localhost:3000
 
 This client is designed to run alongside the TEN Framework playground at a subpath like `/ai-therapist`.
 
-### 1. Build with basePath
+### 1. Build for Production
+
+Use the build script (sets required env vars automatically):
+
+```bash
+./build.sh
+```
+
+Or manually:
 
 ```bash
 NEXT_PUBLIC_BASE_PATH=/ai-therapist NEXT_PUBLIC_BACKEND_URL=/ten-api npm run build
 ```
 
+**Important:** The env vars are baked in at build time. Always use `build.sh` or set the env vars when rebuilding.
+
 ### 2. Run with PM2
 
 ```bash
-NEXT_PUBLIC_BASE_PATH=/ai-therapist NEXT_PUBLIC_BACKEND_URL=/ten-api pm2 start npm --name "ai-therapist" -- start -- -p 4000
+pm2 start npm --name "ai-therapist" -- start -- -p 4000
+```
+
+If already running, restart after rebuild:
+
+```bash
+pm2 restart ai-therapist
 ```
 
 ### 3. Configure nginx
