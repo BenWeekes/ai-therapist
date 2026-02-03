@@ -16,7 +16,7 @@ import { VideoGrid, MobileTabs } from "@agora/agent-ui-kit";
 import { AgoraLogo } from "@agora/agent-ui-kit";
 import { cn } from "@/lib/utils";
 
-const DEFAULT_GRAPH = "flux_apollo_gpt_5_1_cartesia_anam2";
+const DEFAULT_GRAPH = "flux_sentinel_gpt_5_1_cartesia_anam";
 
 export function VideoAvatarClient() {
   const searchParams = useSearchParams();
